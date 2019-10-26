@@ -1,0 +1,50 @@
+div {
+	word-wrap: break-word;
+}
+
+nav {
+	position:fixed;
+	background-color: #01B3ED;
+}
+
+.container-main {
+	border-radius: 25px;
+	background-color: #B34E7E;
+	color: white;
+	margin-top: 10px;
+}
+
+#laba1, #laba2, #laba3, #ekz {
+	border-top: 55px solid transparent;
+	margin-top: -55px;
+	padding: 15px;
+	background-clip: padding-box;
+}
+
+body {
+	background-color: #FFF8B8;
+	color: white;
+}
+
+section {
+	background-color: #B34E7E;
+	border-radius: 30px;
+}
+
+hr {
+	background-color: #01B3ED;
+	margin-top: 15px;
+}
+
+nav a {
+	font-weight: bold;
+}
+
+section a {
+	color: #01B3ED;
+	font-weight: bold;
+}
+
+section a:hover {
+	color: #24c8ff;
+}

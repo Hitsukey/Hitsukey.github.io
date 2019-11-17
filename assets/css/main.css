@@ -48,3 +48,12 @@ section a {
 section a:hover {
 	color: #24c8ff;
 }
+
+h2 {
+	text-align: center;
+}
+
+.shorttitle {
+	text-align: center;
+	font-style: italic;
+}

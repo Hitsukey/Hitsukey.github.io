@@ -1,368 +1,226 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>ИДМ-19-01 | Ильин Илья</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Учебный проект</title>
 </head>
-<body>
-<!-- Навигация -->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="">
-      <img src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Ильин Илья
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body class="body-default-style">
+    <!-- Header -->
+    <header>
+        <nav class="main-menu">
+            <strong class="main-menu__logo">Mod</strong>
+            <div class="main-menu-list main-menu__main-menu-list">
+                <a class="main-menu-list__item" href="#biographySection">Biography</a>
+                <a class="main-menu-list__item" href="#designersSection">Designers</a>
+                <a class="main-menu-list__item" href="#testimonialsSection">Testimonials</a>
+                <a class="main-menu-list__item" href="#strongPointsSection">Strong points</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#laba1">Лабораторная работа 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#laba2">Лабораторная работа 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#laba3">Лабораторная работа 3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#ekz">Подготовка к экзамену</a>
-        </li>
-      </ul>
+                <button class="main-menu__modal-btn" id="modalTrigger" type="button"></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal window -->
+    <div class="modal modal--closed" id="modalWindow">
+        <!--   modal--closed   -->
+        <form action="index.html" method="get">
+            <div class="modal__container">
+                <div class="modal__title">Get in touch</div>
+                <div class="modal__description">Do you have any questions? Have something to say?<br>Don't be shy, write to us:</div>
+                <div class="input-fld modal__input-fld">
+                    <label for="inputName" class="input-fld__label">Name</label>
+                    <input type="text" id="inputName" class="input-fld__input" placeholder="3+ Characters" minlength="3" required>
+                    </input>
+                </div>
+                <div class="input-fld modal__input-fld">
+                    <label for="inputEmail" class="input-fld__label">E-mail</label>
+                    <input type="email" id="inputEmail" class="input-fld__input" placeholder="name@email.com" required>
+                </div>
+                <div class="input-fld modal__input-fld">
+                    <label for="inputComment" class="input-fld__label">Comment</label>
+                    <textarea id="inputComment" class="input-fld__textarea" placeholder="Some text..." required></textarea>
+                </div>
+                <div class="modal__buttons">
+                    <button class="modal__close-btn" id="modalWindowClose">Cancel</button>
+                    <button type="submit" class="modal__submit-btn">Send</button>
+                </div>
+            </div>
+        </form>
     </div>
-  </nav>
 
-  <div class="container">
-    <!-- Приветствие (компонент Jumborton) -->
-    <div class="jumbotron jumbotron-fluid container-main">
-      <div class="container">
-        <h1 class="display-3">Добро пожаловать!</h1>
-        <hr>
-        <p class="lead">Предмет: Интернет-технологии</p>
-        <p class="lead">Группа: ИДМ-19-01</p>
-        <p class="lead">ФИО: Ильин Илья Игоревич</p>
-      </div>
-    </div>
-
-    <!-- Блок для 1 лабы -->
-    <hr>
-    <section id="laba1">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                <div class="heading">
-                  <h2>Лабораторная работа 1<br>"Экосистема разработки программ с открытым кодом"</h2>
-                  <hr>
-                  <div class="shorttitle">Создание персональной страницы-отчета на github и работа с git</div>
-                  <hr>
-                  <h3>Задачи:</h3>
-                  <ol>
-                    <li>Зарегистрироваться на GitHub.</li>
-                    <li>Разработать личную страницу-отчет.</li>
-                    <li>Использовать GitHub, как хостинг.</li>
-                  </ol>
-                  <h3>Выполненные работы:</h3>
-                  <ol>
-                    <li>Создана <a href="https://github.com/Hitsukey" target="_blank">страница пользователя</a> на GitHub.</li>
-                      <img src="assets/images/screenshot1.png" width="90%"></img><br><br>
-                    <li>Разработана личная <a href="https://hitsukey.github.io" target="_blank">страница-отчет</a>.</li>
-                      <img src="assets/images/screenshot2.png" width="90%"></img><br><br>
-                    <li>Странца выгружена в <a href="https://github.com/Hitsukey/Hitsukey.github.io" target="_blank">репозиторий</a> на GitHub.</li>
-                      <img src="assets/images/screenshot3.png" width="90%"></img><br><br>
-                  </ol>
-                </div>
-              </div>
-          </div>
-      </div>
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-section__container">
+            <h1 class="hero-section__title"><strong>Mod Studio</strong></h1>
+            <h2 class="hero-section__description">Modern Web Studio</h2>
+        </div>
     </section>
 
-    <!-- Блок для 2 лабы -->
-    <hr>
-    <section id="laba2">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                <div class="heading">
-                  <h2>Лабораторная работа 2<br>"Разработка простого веб-приложения"</h2>
-                  <hr>
-                  <div class="shorttitle">Проектирование и разработка индивидуального или коллективного веб-приложения с использованием html,css,js + json,xml</div>
-                  <hr>
+    <!-- Biography section -->
+    <section id="biographySection" class="biography-section">
+        <img class="biography-section__img" src="images\jaredWeiss.jpg" alt="jaredWeiss">
+        
+        <div class="biography-section__title-container">
+            <h2 class="biography-section__title-text">Biography</h2>
+        </div>
 
-                  <h3>Задачи:</h3>
-                  <ol>
-                    <li>Сформировать команду для разработки проекта.</li>
-                    <li>Определить роли команды.</li>
-                    <li>Разработать прототип приложения.</li>
-                  </ol>
-                  <h3>Выполненные работы:</h3>
-                  <ol>
-                    <li>Была сформирована команда из трех человек:
-                      <ul>
-                        <li><a href="https://github.com/arzhannikovdmitry">Аржанников Дмитрий</a> - СП, АД, ПП.</li>
-                        <li><a href="https://github.com/hitsukey">Ильин Илья</a> - СП, КО, ПП.</li>
-                        <li><a href="https://github.com/wedmolol">Сурков Павел</a> - РП, СП, НИ, БА.</li>
-                      </ul>
-                    </li>
-                    <li>Коллективным решением было назвать команду <b>"Chemical Society".</b></li>
-                    <li>Команда разработала прототип <b>браузерной игры "Битва хокку"</b>.</li>
-                    <li>
-                      Были разработаны правила:
-                    </li>
-                    <img src="assets/images/screenshot2-1.PNG" width="90%">
-                    <li>
-                      Был разработан пример интерфейса:
-                    </li>
-                    <img src="assets/images/screenshot2-2.PNG" width="90%"><br><br>
-                    <img src="assets/images/screenshot2-3.PNG" width="90%"><br><br>
-                    <img src="assets/images/screenshot2-4.PNG" width="90%"><br><br>
-                  </ol>
+        <div class="biography-section__content">
+            <p class="biography-section__content-title"><b>Katya<br>Mills</b></p>
+            <p class="biography-section__content-title-mobile">-Katya Mills</p>
+            <p class="biography-section__content-subtitle">Art Director<br>Scenography / Styling / Creative Photography / Design</p>
+            <p class="biography-section__content-subtitle-mobile">Art Director<br>- Scenography<br>- Styling<br>- Creative Photography<br>- Design</p>
+            
+            <div>
+                <img class="biography-section__content-rectangle-img" src="images\rectangle.jpg" alt="rectangle">
+                <blockquote class="biography-section__content-quote">“The more I deal with the work as something that is my own, as something that is personal, the more successful it is.”</blockquote>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Designers section -->
+    <section id="designersSection" class="designers-section">
+        <h2 class="designers-section__title">Designers</h2>
+        
+        <div class="designers-section__cards">
+            <div class="designers-section__cards-item">
+                <img class="designers-section__cards-item-img" src="images\spurwingAgency.jpg" alt="spurwingAgency">
+                
+                <div class="designers-section__cards-item-text">
+                    <b class="designers-section__cards-item-text-title">Jess Wonder</b>
+                    <br>
+                    <b>From/</b> Be more flower
+                    <br>
+                    <b>Skills/</b> Design Strategy / Marketing
                 </div>
-              </div>
-          </div>
-      </div>
+            </div>
+            
+            <div class="designers-section__cards-item">
+                <img class="designers-section__cards-item-img" src="images\stil1.jpg" alt="stil1">
+
+                <div class="designers-section__cards-item-text">
+                    <b class="designers-section__cards-item-text-title">Kameron Clein</b>
+                    <br>
+                    <b>From/</b> Be more flower
+                    <br>
+                    <b>Skills/</b> Design Strategy / Marketing
+                </div>
+            </div>
+            
+            <div class="designers-section__cards-item">
+                <img class="designers-section__cards-item-img" src="images\stil2.jpg" alt="stil2">
+
+                <div class="designers-section__cards-item-text">
+                    <b class="designers-section__cards-item-text-title">LOUISSE RED</b>
+                    <br>
+                    <b>From/</b> Be more flower
+                    <br>
+                    <b>Skills/</b> Design Strategy / Marketing
+                </div>
+            </div>
+            
+            <div class="designers-section__cards-item">
+                <img class="designers-section__cards-item-img" src="images\stil1.jpg" alt="stil1">
+                
+                <div class="designers-section__cards-item-text">
+                    <b class="designers-section__cards-item-text-title">Kameron Clein</b>
+                    <br>
+                    <b>From/</b> Be more flower
+                    <br>
+                    <b>Skills/</b> Design Strategy / Marketing
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Блок для 3 лабы -->
-    <hr>
-    <section id="laba3">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                <div class="heading">
-                  <h2>Лабораторная работа 3<br>"Настройка локальной сети передачи данных"</h2>
-                  <hr>
-                  <div class="shorttitle">Настройка коммутаторов и маршрутизаторов</div>
-                  <hr>
-
-                  <p>Расчет диапазонов подсетей.</p>
-                  <table>
-                    <tr>
-                      <th>-</th>
-                      <th>Lan A</th>
-                      <th>Lan B</th>
-                      <th>Lan C</th>
-                      <tr>
-                        <th>Кол-во узлов</th>
-                        <td>12</td>
-                        <td>457</td>
-                        <td>78</td>
-                      </tr>
-                      <tr>
-                        <th>Subnet</th>
-                        <td>192.168.3.0</td>
-                        <td>172.16.3.0</td>
-                        <td>10.10.3.0</td>
-                      </tr>
-                      <tr>
-                        <th>Mask</th>
-                        <td>255.255.255.240</td>
-                        <td>255.255.254.0</td>
-                        <td>255.255.255.128</td>
-                      </tr>
-                      <tr>
-                        <th>Broadcast</th>
-                        <td>192.168.3.15</td>
-                        <td>172.16.4.255</td>
-                        <td>10.10.3.127</td>
-                      </tr>
-                    </tr>
-                  </table>
-                  <br>
-                  <ol>
-                    <li>
-                      <p>Разместить на рабочем поле коммутатор и два компьютера и соединить их.</p>
-                      <img src="assets/images/screenshot3-1.png" width="90%">
-                    </li>
-                    <li>
-                      <p>Добавить на рабочее поле еще один коммутатор с двумя компьютерами и настроить адресацию из другой подсети.</p>
-                      <img src="assets/images/screenshot3-2.png" width="90%">
-                    </li>
-                    <li>
-                      <p>Соединить коммутаторы между собой и проверить работоспособность сети (Не работает, так как коммутаторы подсоединяются только к маршрутизаторам).</p>
-                      <img src="assets/images/screenshot3-3.png" width="90%">
-                    </li>
-                    <li>
-                      <p>Добавить маршрутизатор на рабочее поле.</p>
-                      <img src="assets/images/screenshot3-4.png" width="90%">
-                    </li>
-                    <li>
-                      <p>Добавить на рабочее поле еще один маршрутизатор. Подключить к нему коммутатор и компьютер.</p>
-                      <img src="assets/images/screenshot3-5.png" width="90%">
-                    </li>
-                  </ol>
-                  <br>
-                  <table>
-                    <tr>
-                      <th>Устройство</th>
-                      <th>IP - адрес</th>
-                      <th>Маска</th>
-                      <th>Шлюз</th>
-                      <tr>
-                        <td>PC0</td>
-                        <td>192.168.3.14  </td>
-                        <td>255.255.255.240</td>
-                        <td>192.168.3.1</td>
-                      </tr>
-                      <tr>
-                        <td>PC1</td>
-                        <td>192.168.3.13</td>
-                        <td>255.255.255.240</td>
-                        <td>192.168.3.1</td>
-                      </tr>
-                      <tr>
-                        <td>PC2</td>
-                        <td>172.16.4.254</td>
-                        <td>255.255.254.0</td>
-                        <td>172.16.3.1</td>
-                      </tr>
-                      <tr>
-                        <td>PC3</td>
-                        <td>172.16.4.253</td>
-                        <td>255.255.254.0</td>
-                        <td>172.16.3.1</td>
-                      </tr>
-                      <tr>
-                        <td>PC4</td>
-                        <td>10.10.3.126</td>
-                        <td>255.255.255.128</td>
-                        <td>10.10.3.1</td>
-                      </tr>
-                      <tr>
-                        <td>R0 0/0</td>
-                        <td>192.168.3.1</td>
-                        <td>255.255.255.240</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>R0 0/1</td>
-                        <td>172.16.3.1</td>
-                        <td>255.255.254.0</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>R0 0/2</td>
-                        <td>15.15.3.2</td>
-                        <td>255.255.255.252</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>R1 0/1</td>
-                        <td>10.10.3.1</td>
-                        <td>255.255.255.128</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>R1 0/2</td>
-                        <td>15.15.3.1</td>
-                        <td>255.255.255.252</td>
-                        <td>-</td>
-                      </tr>
-                    </tr>
-                  </table>
-                  <br>
-                  <p>Настройка статической маршрутизации производится при помощи команды: ip route [сеть назначения] [маска] [маршрут]</p>
-                  <p>Установить банер на сетевое оборудование: banner motd [баннер]</p>
-
-                  <p>Проверка работоспособности сети:</p>
-                  <img src="assets/images/screenshot3-6.png" width="90%">
+    <!-- Testimonials section -->
+    <section id="testimonialsSection" class="testimonials-section">
+        <div class="testimonials-section__links-container">
+            <div class="testimonials-section__links-container-items">
+                <div class="testimonials-section__links-container-items-link-container">
+                    <b>Website</b>
+                    <br>
+                    <a href="www.whitepapers.com" class="testimonials-section__links-container-items-link-a">www.whitepapers.com</a>
                 </div>
-              </div>
-          </div>
-      </div>
+
+                <div class="testimonials-section__links-container-items-link-container">
+                    <b>Creativity</b>
+                    <br>
+                    <a href="www.whitepapers.com" class="testimonials-section__links-container-items-link-a">www.whitepapers.com</a>
+                </div>
+
+                <div class="testimonials-section__links-container-items-link-container">
+                    <b>Creativity</b>
+                    <br>
+                    <a href="www.whitepapers.com" class="testimonials-section__links-container-items-link-a">www.whitepapers.com</a>
+                </div>
+            </div>
+            
+            <img class="testimonials-section__links-container-img" src="images\keghanCrossland1.jpg" alt="keghanCrossland1">
+        </div>
+        
+        <div class="testimonials-section__title-container">
+            <h2 class="testimonials-section__title-text">Testimonials</h2>
+        </div>
+
+        <div class="testimonials-section__quote-container">
+            <blockquote class="testimonials-section__quote-container-text">I just really want to do good work and work with some great people, people who challenge me.</blockquote>
+            <img class="testimonials-section__quote-container-img" src="images\sinittaLeunen.jpg" alt="sinittaLeunen">
+        </div>
     </section>
 
-    <!-- Блок для подготовки к экзамену -->
-    <hr>
-    <section id="ekz">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                <div class="heading">
-                  <h2>Подготовка к экзамену</h2>
-                  <h3>Задачи:</h3>
-                  <ol>
-                    <li>Самооценка прохождения теста по инновациям с отражением результата в кондуите.</li>
-                    <li>Самооценка прохождения теста по управлению проектами (рисками) с отражением результата в кондуите.</li>
-                    <li>Подготовка мини-конспекта ответа на один из экзаменационных билетов.</li>
-                  </ol>
-                  <h3>Выполненные работы:</h3>
-                  <ul>
-                    <li>Результат теста "Инновации": <a href="https://docs.google.com/spreadsheets/d/1YBfCBfGZrUc5XJoWlb0x65fSch9kpcsCB17mJ0z-89s/edit#gid=1650591036&range=11:11" target="_blank">86%</a></li>
-                    <li>Результат теста "Проекты": <a href="https://docs.google.com/spreadsheets/d/1YBfCBfGZrUc5XJoWlb0x65fSch9kpcsCB17mJ0z-89s/edit#gid=1985133805&range=11:11" target="_blank">73%</a></li>
-                    <li>Написан ответ на 8 билет:</li>
-                    <details>
-                      <summary>Вопрос 1. Понятия цифровой экономики, цифрового общества, индустрии 4.0.</summary>
-                      <details>
-                        <summary>Понятие цифровой экономики</summary>
-                        <p>Цифровая экономика (digitaleconomy) впервые был употреблен в 1995 году, американским ученым из Массачусетского университета Николасом Негропонте для разъяснения коллегам преимуществ новой экономики в сравнении со старой в связи с интенсивным развитием информационно-коммуникационных технологий.</p>
-                        <p>В утвержденной в России «Стратегии развития информационного общества РФ на 2017-2030 годы» дано следующее определение цифровой экономики: «Цифровая экономика – это хозяйственная деятельность, в которой ключевым фактором производства являются данные в цифровом виде, обработка больших объемов и использование результатов анализа которых по сравнению с традиционными формами хозяйствования позволяют существенно повысить эффективность различных видов производства, технологий, оборудования, хранения, продажи, доставки товаров и услуг».</p>
-                        <p>Благодаря развитию цифровых технологий, потребитель может быстрее получать необходимые ему услуги, экономить, покупая продукты в интернет-магазинах по более низким ценам. Так, электронная версия книги обойдется вам в разы дешевле, чем ее печатный аналог, на оптовой закупке в интернете, договорившись с другими потребителями, вы сэкономите больше, чем делая покупки в оффлайновых торговых точках. В конце концов, потребитель даже может начать свое дело онлайн, стать предпринимателем, не выходя из дома. К другим плюсам развития цифровой экономики относится:</p>
-                        <ul>
-                          <li>рост производительности труда;</li>
-                          <li>повышение конкурентоспособности компаний;</li>
-                          <li>снижение издержек производства;</li>
-                          <li>создание новых рабочих мест;</li>
-                          <li>преодоление бедности и социального неравенства.</li>
-                        </ul>
-                        <p>Риски цифровой экономики Внедрение в жизнь «цифры» и электронной коммерции тем не менее несет для человечества и ряд минусов, среди которых</p>
-                        <ul>
-                          <li>риск кибер-угроз, связанный с проблемой защиты персональных данных (частично проблема мошенничества может решаться внедрением так называемой цифровой грамотности);</li>
-                          <li>«цифровое рабство» (использование данных о миллионах людей для управления их поведением);</li>
-                          <li>рост безработицы на рынке труда, поскольку будет возрастать риск исчезновения некоторых профессий и даже отраслей (например, многие эксперты всерьез полагают, что банковская система в течение ближайших десяти лет исчезнет). Это станет возможным вследствие дальнейшего распространения информационных технологий и ее продуктов, как-то: магазинов с электронными кассами, ботов, обслуживающих клиентов, беспилотных автомобилей и прочего);</li>
-                          <li>«цифровой разрыв» (разрыв в цифровом образовании, в условиях доступа к цифровым услугам и продуктам, и, как следствие, разрыв в уровне благосостояния людей, находящихся в одной стране или в разных странах)</li>
-                        </ul>
-                        <p>Главные цифровые экономики мира «Цифровыми» странами-лидерами на сегодняшний день являются Норвегия, Швеция и Швейцария. В топ-10 входят США, Великобритания, Дания, Финляндия, Сингапур, Южная Корея и Гонконг.</p>
-                      </details>
-                      <details>
-                        <summary>Понятие цифрового общества</summary>
-                        <p>Цифровое общество – общество, в котором большинство работающих занято производством, хранением, переработкой, продажей и обменом информацией. Международные принципы создания информационного общества и подходы к его созданию определены Окинавской хартией глобального информационного общества (2000), Декларацией принципов «Построение информационного общества — глобальная задача в новом тысячелетии» (2003), Планом действий Тунисского обязательства (2005). Введение термина «информационное общество» приписывают профессору Токийского технологического университета Юдзиро Хаяши, который в 1969 г. по заказу правительства Японии опубликовал несколько докладов: «Японское информационное общество: темы и подходы» и «Контуры политики содействия информатизации японского общества». В 1971 г. Токийский технологический университет представил публике доклад «План информационного общества». Американский социолог Д. Белл полагает, что информационное общество как следующая стадия общественного развития может характеризоваться тремя основными критериями:</p>
-                        <ol>
-                          <li>должен произойти переход от доминирования индустриального производства к производству услуг (массовый рабочий не нужен);</li>
-                          <li>научное знание приобретает определяющее значение в процессе реализации технологических нововведений;</li>
-                          <li>интеллектуальные технологии должны стать ключевым элементом системного анализа и теории принятия решений.</li>
-                        </ol>
-                      </details>
-                      <details>
-                        <summary>Понятие индустрии 4.0</summary>
-                        <p>Четвёртая промышленная революция (англ.The Fourth Industrial Revolution) —прогнозируемое событие, массовое внедрение киберфизических систем в производство(индустрия 4.0), обслуживание человеческих потребностей, включая быт, труди досуг. Изменения охватят самые разные стороны жизни: рынок труда, жизненную среду, политические системы, технологический уклад, человеческую идентичность и другие. Вызываемая к жизни экономической целесообразностью и привлекательностью повышения качества жизни, четвёртая промышленная революция несёт в себе риски повышения нестабильности и возможного коллапса мировой системы, в связи с чем её наступление воспринимается как вызов, на который человечеству предстоит ответить.</p>
-                        <h6>Терминология:</h6>
-                        <p>Цифровое производство—интегрированная компьютерная система, включающая в себя средства численного моделирования, трехмерной (3D) визуализации, инженерного анализа и совместной работы, предназначенные для разработки конструкции изделий и технологических процессов их изготовления. Цифровое производство начиналось с таких инициатив, как конструирование с учетом технологичности (DFM), компьютерно-интегрированное производство (CIM), гибкое производство, бережливое производство и других, направленных на расширение совместной работы при конструкторско-технологической подготовке производства изделий.</p>
-                      </details>
-                    </details>
-                    <details>
-                      <summary>Вопрос 2. Технологии асинхронного обмена данными в среде браузера.</summary>
-                      <p>При передаче данных отдельными байтами осуществляется только побитовая синхронизация, синхронизация по кадрам не ведется. Такой режим работы называется асинхронным или старт-стопным. Такой режим удобен при невысоком качестве канала связи (например, высокий уровень помех), при передаче информации от устройств, которые генерируют байты данных в случайные моменты времени. Так работает клавиатура дисплея или другого терминального устройства, с которого человек вводит данные для обработки их компьютером.</p>
-                      <p>В асинхронном режиме каждый байт данных сопровождается специальными сигналами "старт" и "стоп". Назначение этих сигналов состоит в том, чтобы, во-первых, известить приемник о приходе данных и, во-вторых, чтобы дать приемнику достаточно времени для выполнения некоторых функций, связанных с синхронизацией, до поступления следующего байта. Сигнал "старт" имеет продолжительность в один тактовый интервал, а сигнал "стоп" может длиться один, полтора или два такта. AJAX — это аббревиатура, которая означает Asynchronous Javascript and XML. На самом деле, AJAX не является новой технологией, так как и Javascript, и XML. AJAX — это синтез обозначенных технологий. AJAX чаще всего ассоцириуется с термином Web 2.0 и преподносится как новейшее Web-приложение. Обобщим достоинства AJAX:</p>
-                      <ul>
-                        <li>Возможность создания удобного Web-интерфейса</li>
-                        <li>Активное взаимодействие с пользователем</li>
-                        <li>Частичная перезагрузка страницы, вместо полной</li>
-                        <li>Удобство использования</li>
-                      </ul>
-                      <p>Для того, чтобы осуществлять обмен данными, на странице должен быть создан объект XMLHttpRequest, который является своеобразным посредником между Браузером пользователя и сервером. С помощью XMLHttpRequest можно отправить запрос на сервер, а также получить ответ в виде различного рода данных. Обмениваться данными с сервером можно двумя способами. Первый способ — это GET-запрос. В этом запросе вы обращаетесь к документу на сервере, передавая ему аргументы через сам URL. При этом на стороне клиента будет логично использовать функция Javascript escape для того, чтобы некоторые данные не прервали запрос.</p>
-                      <p>Клиент часть, написанная на Javascript, должна обеспечивать необходимую функциональность для безопасного обмена с сервером и предоставлять методы для обмена данными любым из вышеперечисленных способов. Серверная часть должна обрабатывать входные данные, и на основе их генерировать новую информацию (например, работая с базой данных), и отдавать ее обратно клиенту. Например, для запроса информации с сервера можно использовать обычный GET-запрос с передачей нескольких и небольших по размеру параметров, а для обновления информации, или добавления новой информации потребуется использовать уже POST-запрос, так как он позволяет передавать большие объемы данных. Как уже было сказано, AJAX использует асинхронную передачу данных. Это значит, что пока идёт передача данных, пользователь может совершать другие, необходимые ему действия. В это время следует оповестить пользователя о том, что идёт какой-либо обмен данными, иначе пользователь подумает, что произошло что-то не то и может покинуть сайт, или повторно вызвать «зависшую», по его мнению, функцию.</p>
-                      <p>Ответ от сервера может быть не только XML, как следует из названия технологии. Помимо XML, можно получить ответ в виде обычного текста, или же JSON (Javascript Object Notation). Если ответ был получен простым текстом, то его можно сразу вывести в контейнер на странице. При получении ответа в виде XML, обычно происходит обработка полученного XML документа на стороне клиента и преобразование данных к (X)HTML. При получении ответа в формате JSON клиент должен лишь выполнить полученный код (функция Javascript`а eval) для получения полноценного объекта Javascript. Но здесь нужно быть осторожным и учитывать тот факт, что с использованием этой технологии может быть передан вредоносный код, поэтому перед выполнением полученного с сервера кода следует его тщательно проверить и обработать. Существует такая практика, как «холостой» запрос, при котором никакой ответ от сервера не приходит, лишь изменяются данные на стороне сервера.</p>
-                    </details>
-                  </ul>
+    <!-- Strong points section -->
+    <section id="strongPointsSection" class="strong-points-section">
+        <h2 class="strong-points-section__title">Strong points</h2>
+        <div class="strong-points-section__content">
+            <img class="strong-points-section__content-img" src="images\dawidLiberadzki.jpg" alt="dawidLiberadzki">
+            <img class="strong-points-section__content-img" src="images\averyKlein1.jpg" alt="averyKlein1">
+            
+            <div class="strong-points-section__content-strengths">
+                <p class="strong-points-section__content-strengths-title">Strengths</p>
+                <div class="strong-points-section__content-strengths-list-container">
+                    <ul class="strong-points-section__content-strengths-list">
+                        <li>Interiors</li>
+                        <li>Outdoors</li>
+                        <li>Portraits</li>
+                        <li>Styling</li>
+                        <li>Events</li>
+                        <li>Architecture</li>
+                        <li>Design</li>
+                        <li>Celebrations</li>
+                        <li>Fashion</li>
+                        <li>Nature</li>
+                    </ul>
                 </div>
-              </div>
-          </div>
-      </div>
+            </div>
+            
+            <img class="strong-points-section__content-img" src="images\keghanCrossland2.jpg" alt="keghanCrossland2">
+            <img class="strong-points-section__content-img" src="images\averyKlein1.jpg" alt="averyKlein2">
+        </div>
     </section>
-  </div>
 
+    <!-- MainMenuMobile -->
+    <nav class="main-menu-mobile">
+        <div class="main-menu-mobile__list">
+            <a class="main-menu-mobile__list-item" href="#biographySection">B</a>
+            <a class="main-menu-mobile__list-item" href="#designersSection">D</a>
+            <a class="main-menu-mobile__list-item" href="#testimonialsSection">T</a>
+            <a class="main-menu-mobile__list-item" href="#strongPointsSection">S</a>
 
+            <button class="main-menu__modal-btn" id="modalTriggerMobile" type="button"></button>
+        </div>
+    </nav>
 
-<!-- Подключение скриптов -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p class="footer-section__contacts">+7 921 123-45-67<br>INFO@MODSTUDIO.COM</p>
+        <p class="footer-section__logo">A product of <strong>MOD</strong></p>
+        <p class="footer-section__pricing">© 2023 Mod Media. All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a5494e5ebb.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
-
-
